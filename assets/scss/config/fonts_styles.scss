@@ -1,0 +1,52 @@
+:root {
+  font-size: 62.5%;
+  body {
+    font-size: 1.6rem;
+    width: 100vw;
+  }
+}
+
+html {
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+
+h1 {
+font-family: 'Oswald', 'sans-serif';
+font-size: 10rem;
+font-style: normal;
+font-weight: normal;
+letter-spacing: 0.1px;
+line-height: 123.964px;
+text-transform: none;
+color: $main-color;
+padding: 0.8rem;
+}
+
+h2 {
+  font-size: 6rem;
+}
+
+h3 {
+  font-family: 'Brandon Grotesque Black';
+}
+
+p {
+  font-family: 'MaisonNeue';
+}
+
+.content-1 {
+font-family: "Brandon Grotesque Black";
+font-size: 17px;
+font-style: normal;
+font-weight: normal;
+letter-spacing: 3.06px;
+line-height: 24.99px;
+text-transform: uppercase;
+color: $main-color;
+}

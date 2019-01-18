@@ -1,0 +1,16 @@
+$smallBreakpoint: 600;
+$mediumBreakpoint: 800;
+$largeBreakpoint: 1024;
+$hugeBreakpoint: 1200;
+
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+@mixin mq($property, $size) {
+  $value: strip-unit($size);
+
+  @media only screen and (#{$property}: #{$value}px ){
+    @content;
+  }
+}
