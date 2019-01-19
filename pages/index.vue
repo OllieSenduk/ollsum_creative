@@ -1,6 +1,7 @@
 <template>
   <section class="wrapper">
-    <Header/>
+    <appNav/>
+    <appHeader/>
     <div class="container">
     </div>
   </section>
@@ -8,10 +9,12 @@
 
 <script>
 import Header from '~/components/home/Header.vue'
+import Nav from '~/components/shared/Nav.vue'
 
 export default {
   components: {
-    Header
+    appHeader: Header,
+    appNav: Nav
   }
 }
 </script>

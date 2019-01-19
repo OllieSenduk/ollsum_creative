@@ -1,10 +1,11 @@
 <template lang="html">
   <section class="header">
-    <h2 class="title">
-      Creative and Digital Agency
-    </h2>
-    <p>Love life</p>
-    <div class="svg">
+    <div class="header__title">
+      <h2 class="title">
+        Creative and Digital Studio
+      </h2>
+    </div>
+    <div class="header__svg">
     	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" class="header__logo">
     		<rect class="path" x="100" y="150" rx="0" ry="0" width="400" height="300" stroke-width="1" stroke="black" fill="white" />
     		<rect class="path2" x="125" y="175" rx="0" ry="0" width="350" height="250" stroke-width="1" stroke="blue" fill="white" />
@@ -22,7 +23,12 @@ export default {
 
 <style lang="scss" scoped>
 
-  .svg {
+  .header {
+    height: 90vh;
+  }
+
+
+  .header__svg {
     width: 400px;
     max-width: 100%;
     max-height: 400px;
@@ -34,8 +40,11 @@ export default {
     z-index: -1;
   }
 
-  .title {
+  .header__title {
+
+    h2 {
     font-size: 6.4em
+    }
   }
 
 .path {
