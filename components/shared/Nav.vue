@@ -52,7 +52,6 @@ export default {
 // BURGER MENU
 
   .bars {
-    position: absolute;
     width: 27px;
     height: 27px;
     top: 30px;

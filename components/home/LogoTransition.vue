@@ -1,19 +1,40 @@
 <template lang="html">
-  <div class="header__svg">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" class="header__logo">
-      <rect class="path" x="100" y="150" rx="0" ry="0" width="400" height="300" stroke-width="1" stroke="black" fill="white" />
-      <rect class="path2" x="125" y="175" rx="0" ry="0" width="350" height="250" stroke-width="1" stroke="blue" fill="white" />
-      <rect class="path3" x="150" y="200" rx="0" ry="0" width="300" height="200" stroke-width="1" stroke="red" fill="white" />
-    </svg>
-  </div>
+  <section class="logo_transition">
+    <div class="header__svg">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" class="header__logo">
+        <rect class="path" x="100" y="150" rx="0" ry="0" width="400" height="300" stroke-width="1" stroke="black" fill="white" />
+        <rect class="path2" x="125" y="175" rx="0" ry="0" width="350" height="250" stroke-width="1" stroke="blue" fill="white" />
+        <rect class="path3" x="150" y="200" rx="0" ry="0" width="300" height="200" stroke-width="1" stroke="red" fill="white" />
+      </svg>
+    </div>
+  </section>
+
 </template>
 
+
 <script>
+if (process.BROWSER_BUILD && window) {
+  window.Scrollama = require('vue-scrollama')
+  console.log("hello")
+}
 export default {
+
+  methods: {
+    stepEnterHandler ({element, index, direction}) {
+      // handle the step-event as required here
+      console.log(element, index, direction)
+    }
+  }
 }
 </script>
 
+
 <style lang="scss" scoped>
+
+.logo_transition {
+  height: 90vh;
+  transform: rotate(-20deg);
+}
 .path {
   stroke-dasharray: 2000;
   stroke-dashoffset: 2000;
@@ -37,5 +58,6 @@ export default {
     stroke-dashoffset: 0;
   }
 }
+
 
 </style>

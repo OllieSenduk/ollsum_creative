@@ -12,9 +12,11 @@
   },
   "dependencies": {
     "cross-env": "^5.2.0",
+    "intersection-observer": "^0.5.1",
     "nuxt": "^2.0.0",
     "nuxt-sass-resources-loader": "^2.0.5",
-    "sass-mq": "^5.0.0"
+    "sass-mq": "^5.0.0",
+    "vue-scrollama": "^1.1.0"
   },
   "devDependencies": {
     "node-sass": "^4.11.0",

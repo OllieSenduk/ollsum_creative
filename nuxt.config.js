@@ -15,6 +15,11 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ],
+    script: [
+      {src: "https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"},
+      {src: "https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"}
+
     ]
   },
 
@@ -34,6 +39,7 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    { src: '~/plugins/scrollama', ssr: false },
   ],
 
   /*

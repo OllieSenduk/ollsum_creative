@@ -1,9 +1,15 @@
 <template lang="html">
   <section class="header">
     <div class="header__title">
+      <!-- <span>The</span> -->
       <h2 class="title">
-        Creative and Digital Studio
+       The Creative & Digital
       </h2>
+      <br>
+      <span class="title__last">Studio</span>
+      <div class="header__company_name">
+        <b>By OLLSUM</b>
+      </div>
     </div>
   </section>
 </template>
@@ -16,11 +22,6 @@ export default {
 
 <style lang="scss" scoped>
 
-  .header {
-    height: 90vh;
-  }
-
-
   .header__svg {
     width: 400px;
     max-width: 100%;
@@ -29,15 +30,31 @@ export default {
     position: absolute;
     bottom: 10px;
     right: -10px;
-
     z-index: -1;
   }
 
   .header__title {
 
-    h2 {
-    font-size: 6.4em
+    .title__last {
+      color: $secondary-color;
+      font-size: 5em;
+      font-family: 'paper';
+      transform: rotate(-20deg);
     }
+
+    h2 {
+      font-size: 5.7em;
+      line-height: 90px;
+      animation-duration: 3s;
+    }
+  }
+
+  .header__company_name {
+    text-align: right;
+    margin-right: 10px;
+    padding-top: 20px;
+    // color: #F43565;
+    font-family: 'Eina-semibold';
   }
 
 </style>

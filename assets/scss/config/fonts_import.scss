@@ -3,10 +3,10 @@
 
 // Brandon Grotesque -> Small and fat
 @font-face {
-font-family: 'Brandon Grotesque Black';
-font-style: normal;
-font-weight: normal;
-src: local('Brandon Grotesque Black'), url('~assets/fonts/brandon/brandon-grotesque-black-58a8a3e824392.woff') format('woff');
+  font-family: 'Brandon Grotesque Black';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Brandon Grotesque Black'), url('~assets/fonts/brandon/brandon-grotesque-black-58a8a3e824392.woff') format('woff');
 }
 
 @font-face {
@@ -14,6 +14,34 @@ font-family: 'MaisonNeue';
 font-style: normal;
 font-weight: normal;
 src: local('MaisonNeue'), url('~assets/fonts/maisonNeue/MaisonNeue-Book.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Paper';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Paper'), url('~assets/fonts/newspaper/paper.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Paper2';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Paper2'), url('~assets/fonts/newspaper/paper2.woff') format('woff');
+}
+//
+@font-face {
+  font-family: 'Paper2';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Paper2'), url('~assets/fonts/newspaper/paper2.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Eina-semibold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Eina-semibold'), url('~assets/fonts/eina/eina-03-semibold.woff') format('woff');
 }
 //
 // @font-face {
