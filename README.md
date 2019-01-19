@@ -2,6 +2,14 @@
 
 > Creative and Digital Agency
 
+## Added packages
+Breakpoint mixins: https://github.com/sass-mq/sass-mq
+    mq() takes up to three optional parameters:
+
+    $from: inclusive min-width boundary
+    $until: exclusive max-width boundary
+    $and: additional custom directives
+
 ## Build Setup
 
 ``` bash

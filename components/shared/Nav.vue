@@ -8,7 +8,7 @@
   <!--Navbar Links-->
   <nav id="nav" v-bind:class="{ visible: navOpen }">
     <ul>
-      <li class="shape-circle circle-one"><a href="#">Contact</a></li>
+      <li class="shape-circle circle-one"><a href="https://dribbble.com/shots/4363610-Introducing-The-Design-Genome-Project-by-InVision">Contact</a></li>
       <li class="shape-circle circle-two"><a href="#">Blog</a></li>
       <li class="shape-circle circle-three"><a href="#">Work</a></li>
       <li class="shape-circle circle-five">
@@ -44,6 +44,11 @@ export default {
 
 <style lang="scss" scoped>
 
+// Overall Component
+.navbar {
+  height: 10vh;
+  width: 100vw;
+}
 // BURGER MENU
 
   .bars {
@@ -55,6 +60,8 @@ export default {
     cursor: pointer;
     z-index: 101;
     padding-top:9px;
+    position: fixed;
+    margin-top: 10px;
     }
 
   .bar {
@@ -118,7 +125,7 @@ export default {
   /* Navbar Links CSS */
 
   #nav {
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
@@ -134,7 +141,7 @@ export default {
     text-decoration: none;
     line-height: 70vw;
     position: absolute;
-    top: 0;
+    top: 40px;
     bottom: 0;
     left: 0;
     right: 0;
@@ -168,6 +175,74 @@ export default {
     box-shadow: 0 0px 0px rgba(4, 26, 62, 0.5);
   }
 
+// NAV EFFECT
+  nav.visible li:first-child {
+    width: 215vw;
+    height: 215vw;
+    top: -100vw;
+    right: -100vw;
+    z-index: 5;
+    transition: all .5s ease-in-out;
+    box-shadow: 0 0px 80px rgba(4, 26, 62, 0.5);
+  }
+
+  nav.visible li:nth-child(2) {
+    width: 165vw;
+    height: 165vw;
+    top: -75vw;
+    right: -75vw;
+    z-index: 6;
+    transition: all .6s ease-in-out;
+    box-shadow: 0 0px 80px rgba(4, 26, 62, 0.5);
+  }
+
+  nav.visible li:nth-child(3){
+    width: 115vw;
+    height: 115vw;
+    top: -50vw;
+    right: -50vw;
+    z-index: 7;
+    transition: all .7s ease-in-out;
+    box-shadow: 0 0px 80px rgba(4, 26, 62, 0.5);
+  }
+
+  nav.visible li:last-child{
+    width: 65vw;
+    height: 65vw;
+    top: -25vw;
+    right: -25vw;
+    z-index: 8;
+    transition: all .8s ease-in-out;
+    box-shadow: 0 0px 80px rgba(4, 26, 62, 0.5);
+  }
+
+  nav.visible li:first-child a {
+    line-height: 265vw !important;
+    text-indent: 15vw !important;
+  }
+
+  nav.visible li:nth-child(2) a {
+    line-height: 200vw !important;
+    text-indent:17vw !important;
+  }
+
+  nav.visible li:nth-child(3) a {
+    line-height: 137vw !important;
+    text-indent: 17vw !important;
+  }
+
+  nav.visible li:last-child a {
+    line-height: 70vw !important;
+    text-indent:12vw !important;
+  }
+
+
+
+@include mq($from: tablet) {
+
+  #nav a {
+    top: 25px;
+  }
   nav.visible li:first-child {
     width: 200vw;
     height: 200vw;
@@ -227,6 +302,8 @@ export default {
     line-height: 70vw !important;
     text-indent:12vw !important;
   }
+
+}
 
 
 </style>
