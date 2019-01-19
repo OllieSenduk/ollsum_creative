@@ -8,19 +8,19 @@
 </template>
 
 <script>
-import Header from '~/components/home/Header.vue'
 import Nav from '~/components/shared/Nav.vue'
+import Header from '~/components/home/Header.vue'
+import LogoTransition from '~/components/home/LogoTransition.vue'
 
 export default {
   components: {
     appHeader: Header,
-    appNav: Nav
+    appNav: Nav,
+    appLogoTransition: LogoTransition
   }
 }
 </script>
 
 <style lang="scss">
-@import '~assets/scss/app.scss';
-
-
+  @import '~assets/scss/app.scss';
 </style>

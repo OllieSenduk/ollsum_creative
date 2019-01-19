@@ -136,22 +136,25 @@ export default {
     opacity: 0;
   }
 
-  #nav a {
-    color: #fff;
-    text-decoration: none;
-    line-height: 70vw;
-    position: absolute;
-    top: 40px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    text-indent: 50vw;
-    border-radius: 50%;
-    transition: all .5s;
-  }
+  #nav {
 
-  #nav a:hover {
-    background: #357FFD;
+    a {
+      color: #fff;
+      text-decoration: none;
+      line-height: 70vw;
+      position: absolute;
+      top: 40px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      text-indent: 50vw;
+      border-radius: 50%;
+      transition: all .5s;
+    }
+
+    a:hover {
+      background: #357FFD;
+    }
   }
 
   ul {
@@ -176,66 +179,70 @@ export default {
   }
 
 // NAV EFFECT
-  nav.visible li:first-child {
-    width: 215vw;
-    height: 215vw;
-    top: -100vw;
-    right: -100vw;
-    z-index: 5;
-    transition: all .5s ease-in-out;
-    box-shadow: 0 0px 80px rgba(4, 26, 62, 0.5);
-  }
+  nav {
+    &.visible {
+      li:first-child {
+        width: 213vw;
+        height: 213vw;
+        top: -100vw;
+        right: -100vw;
+        z-index: 5;
+        transition: all .5s ease-in-out;
+        box-shadow: 0 0px 80px rgba(4, 26, 62, 0.5);
+      }
 
-  nav.visible li:nth-child(2) {
-    width: 165vw;
-    height: 165vw;
-    top: -75vw;
-    right: -75vw;
-    z-index: 6;
-    transition: all .6s ease-in-out;
-    box-shadow: 0 0px 80px rgba(4, 26, 62, 0.5);
-  }
+      a {
+        line-height: 265vw !important;
+        text-indent: 15vw !important;
+      }
+    }
 
-  nav.visible li:nth-child(3){
-    width: 115vw;
-    height: 115vw;
-    top: -50vw;
-    right: -50vw;
-    z-index: 7;
-    transition: all .7s ease-in-out;
-    box-shadow: 0 0px 80px rgba(4, 26, 62, 0.5);
-  }
+    li:nth-child(2) {
+      width: 165vw;
+      height: 165vw;
+      top: -75vw;
+      right: -75vw;
+      z-index: 6;
+      transition: all .6s ease-in-out;
+      box-shadow: 0 0px 80px rgba(4, 26, 62, 0.5);
 
-  nav.visible li:last-child{
-    width: 65vw;
-    height: 65vw;
-    top: -25vw;
-    right: -25vw;
-    z-index: 8;
-    transition: all .8s ease-in-out;
-    box-shadow: 0 0px 80px rgba(4, 26, 62, 0.5);
-  }
+      a {
+        line-height: 200vw !important;
+        text-indent:17vw !important;
+      }
+    }
 
-  nav.visible li:first-child a {
-    line-height: 265vw !important;
-    text-indent: 15vw !important;
-  }
+    li:nth-child(3){
+      width: 115vw;
+      height: 115vw;
+      top: -50vw;
+      right: -50vw;
+      z-index: 7;
+      transition: all .7s ease-in-out;
+      box-shadow: 0 0px 80px rgba(4, 26, 62, 0.5);
 
-  nav.visible li:nth-child(2) a {
-    line-height: 200vw !important;
-    text-indent:17vw !important;
-  }
+      a {
+        line-height: 137vw !important;
+        text-indent: 17vw !important;
+      }
+    }
 
-  nav.visible li:nth-child(3) a {
-    line-height: 137vw !important;
-    text-indent: 17vw !important;
-  }
+    li:last-child{
+      width: 65vw;
+      height: 65vw;
+      top: -25vw;
+      right: -25vw;
+      z-index: 8;
+      transition: all .8s ease-in-out;
+      box-shadow: 0 0px 80px rgba(4, 26, 62, 0.5);
 
-  nav.visible li:last-child a {
-    line-height: 70vw !important;
-    text-indent:12vw !important;
-  }
+      a {
+        line-height: 70vw !important;
+        text-indent:12vw !important;
+      }
+    }
 
+  }
 
 
 @include mq($from: tablet) {
@@ -243,66 +250,30 @@ export default {
   #nav a {
     top: 25px;
   }
-  nav.visible li:first-child {
-    width: 200vw;
-    height: 200vw;
-    top: -100vw;
-    right: -100vw;
-    z-index: 5;
-    transition: all .5s ease-in-out;
-    box-shadow: 0 0px 80px rgba(4, 26, 62, 0.5);
-  }
 
-  nav.visible li:nth-child(2) {
-    width: 150vw;
-    height: 150vw;
-    top: -75vw;
-    right: -75vw;
-    z-index: 6;
-    transition: all .6s ease-in-out;
-    box-shadow: 0 0px 80px rgba(4, 26, 62, 0.5);
-  }
+  nav {
+    &.visible {
+      li:first-child {
+        width: 200vw;
+        height: 200vw;
+      }
 
-  nav.visible li:nth-child(3){
-    width: 100vw;
-    height: 100vw;
-    top: -50vw;
-    right: -50vw;
-    z-index: 7;
-    transition: all .7s ease-in-out;
-    box-shadow: 0 0px 80px rgba(4, 26, 62, 0.5);
-  }
+      li:nth-child(2) {
+        width: 150vw;
+        height: 150vw;
+      }
 
-  nav.visible li:last-child{
-    width: 50vw;
-    height: 50vw;
-    top: -25vw;
-    right: -25vw;
-    z-index: 8;
-    transition: all .8s ease-in-out;
-    box-shadow: 0 0px 80px rgba(4, 26, 62, 0.5);
-  }
+      li:nth-child(3){
+        width: 100vw;
+        height: 100vw;
+      }
 
-  nav.visible li:first-child a {
-    line-height: 265vw !important;
-    text-indent: 15vw !important;
+      li:last-child{
+        width: 50vw;
+        height: 50vw;
+      }
+    }
   }
-
-  nav.visible li:nth-child(2) a {
-    line-height: 200vw !important;
-    text-indent:17vw !important;
-  }
-
-  nav.visible li:nth-child(3) a {
-    line-height: 137vw !important;
-    text-indent: 17vw !important;
-  }
-
-  nav.visible li:last-child a {
-    line-height: 70vw !important;
-    text-indent:12vw !important;
-  }
-
 }
 
 
