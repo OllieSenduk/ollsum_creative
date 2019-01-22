@@ -1,13 +1,23 @@
 <template lang="html">
-  <div class="menu-wrapper">
-    <div class="hamburger-menu"></div>
+  <div class="menu-wrapper" @click="handleBurger">
+    <div class="hamburger-menu" v-bind:class="{ animate: navOpen }"></div>
   </div>
 </template>
 
 <script>
 
 export default {
-
+  data: function () {
+    return {
+      navOpen: false
+    };
+  },
+  methods: {
+    handleBurger: function() {
+      var self = this
+      self.navOpen = !self.navOpen
+    }
+  }
 }
 </script>
 
