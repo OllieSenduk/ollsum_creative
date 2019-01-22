@@ -1,19 +1,23 @@
 <template>
   <div class="app_wrapper">
-    <appNav/>
-    <div class="app_container">
-      <appHeader/>
-      <appHeaderTransition />
-      <!-- <no-ssr placeholder="Loading..."> -->
+    <appHamburger/>
+    <appNavigation/>
+    <!-- <div class="app_background">
+      <div class="app_container">
 
-      <appMissionStatement/>
-      <!-- </no-ssr> -->
-    </div>
+        <appHeader/>
+        <appHeaderTransition />
+        <appMissionStatement/>
+
+      </div>
+    </div> -->
   </div>
 </template>
 
 <script>
 import Nav from '~/components/shared/Nav.vue'
+import Navigation from '~/components/shared/Navigation.vue'
+import Hamburger from '~/components/shared/Hamburger.vue'
 import Header from '~/components/home/Header.vue'
 import HeaderTransition from '~/components/home/HeaderTransition.vue'
 import MissionStatement from '~/components/home/MissionStatement.vue'
@@ -21,21 +25,26 @@ import MissionStatement from '~/components/home/MissionStatement.vue'
 export default {
   components: {
     appHeader: Header,
+    appHamburger: Hamburger,
     appNav: Nav,
+    appNavigation: Navigation,
     appHeaderTransition: HeaderTransition,
     appMissionStatement: MissionStatement
   },
   methods: {
     handleScroll: function() {
-      // handle the step-event as required here
-      console.log("I'm in the parent")
       const [red, green, blue] = [225, 225, 225]
-      const y = 0.1 + (window.scrollY || window.pageYOffset) / 100
+      const y = 0.1 + (window.scrollY || window.pageYOffset) / 50
       const [r, g, b] = [red/y, green/y, blue/y].map(Math.round)
-      // console.log(this.$el.querySelector('.app_container'))
-      const background = this.$el.querySelector('.app_container')
+      const background = this.$el.querySelector('.app_background')
       background.style.backgroundColor = `rgb(${r}, ${g}, ${b})`
     }
+  },
+  mounted() {
+    var self = this
+    window.addEventListener('scroll', () => {
+      self.handleScroll()
+    })
   }
 }
 </script>

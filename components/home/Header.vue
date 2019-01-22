@@ -43,7 +43,7 @@ export default {
     }
 
     h2 {
-      font-size: 5.7em;
+      font-size: 5em;
       line-height: 90px;
       animation-duration: 3s;
     }

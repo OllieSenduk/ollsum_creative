@@ -47,7 +47,7 @@ export default {
 // Overall Component
 .navbar {
   height: 10vh;
-  width: 100vw;
+  width: 100%;
 }
 // BURGER MENU
 

@@ -26,31 +26,31 @@ export default {
     }
   },
   methods: {
-    handleScroll: function() {
-      if ((window.scrollY >= this.elementHeightStart) && (window.scrollY <= this.elementHeightEnd)) {
-        const [red, green, blue] = [69, 111, 225]
-        const y = 1 + (window.scrollY || window.pageYOffset) / 150
-        const [r, g, b] = [red/y, green/y, blue/y].map(Math.round)
-        this.element.style.backgroundColor = `rgb(${r}, ${g}, ${b})`
-      }
-    }
+    // handleScroll: function() {
+    //   if ((window.scrollY >= this.elementHeightStart) && (window.scrollY <= this.elementHeightEnd)) {
+    //     const [red, green, blue] = [69, 111, 225]
+    //     const y = 1 + (window.scrollY || window.pageYOffset) / 150
+    //     const [r, g, b] = [red/y, green/y, blue/y].map(Math.round)
+    //     this.element.style.backgroundColor = `rgb(${r}, ${g}, ${b})`
+    //   }
+    // }
   },
-  mounted() {
-    this.element = this.$el.querySelector('#transition_component')
-    this.elementHeightStart = this.element.getBoundingClientRect().top + window.scrollY;
-    this.elementHeightEnd = this.element.getBoundingClientRect().bottom + window.scrollY;
-    console.log(this.elementHeightEnd)
-
-      window.addEventListener('scroll', () => {
-          this.$parent.handleScroll();
-
-          const [red, green, blue] = [225, 225, 225]
-          const y = 0.2 + (window.scrollY || window.pageYOffset) / 300
-          const [r, g, b] = [red/y, green/y, blue/y].map(Math.round)
-          const hello = this.$el.querySelector('.wrapper')
-          // this.element.style.backgroundColor = `rgb(${r}, ${g}, ${b})`
-      });
-    }
+  // mounted() {
+  //   this.element = this.$el.querySelector('#transition_component')
+  //   this.elementHeightStart = this.element.getBoundingClientRect().top + window.scrollY;
+  //   this.elementHeightEnd = this.element.getBoundingClientRect().bottom + window.scrollY;
+  //   console.log(this.elementHeightEnd)
+  //
+  //     window.addEventListener('scroll', () => {
+  //         // this.$parent.handleScroll();
+  //
+  //         const [red, green, blue] = [225, 225, 225]
+  //         const y = 0.2 + (window.scrollY || window.pageYOffset) / 300
+  //         const [r, g, b] = [red/y, green/y, blue/y].map(Math.round)
+  //         const hello = this.$el.querySelector('.wrapper')
+  //         // this.element.style.backgroundColor = `rgb(${r}, ${g}, ${b})`
+  //     });
+  //   }
 }
 </script>
 

@@ -1,5 +1,8 @@
 <template lang="html">
   <section class="mission_statement">
+    <div class="playbutton">
+
+    </div>
     <div class="title">
       <h2>Think.
         <br>
@@ -27,6 +30,11 @@ export default {
     color: white;
   }
 
+  .playbutton {
+    -webkit-clip-path: polygon(0 0, 0% 100%, 100% 48%);
+    clip-path: polygon(0 0, 0% 100%, 100% 48%);
+    color: white;
+  }
   .vimeo-wrapper {
    position: relative;
    top: 0;
