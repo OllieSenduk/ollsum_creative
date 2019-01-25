@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="menu-wrapper" @click="handleBurger">
+  <div class="menu-wrapper" @click="navClicked">
     <div class="hamburger-menu" v-bind:class="{ animate: navOpen }"></div>
   </div>
 </template>
@@ -13,15 +13,14 @@ export default {
     };
   },
   methods: {
-    handleBurger: function() {
-      var self = this
-      self.navOpen = !self.navOpen
+    navClicked: function() {
+      this.$emit('navClicked')
     }
   }
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   $bar-width: 50px;
   $bar-height: 5px;
   $bar-spacing: 10px;

@@ -5,8 +5,7 @@
       <h2 class="title">
        The Creative & Digital
       </h2>
-      <br>
-      <span class="title__last">Studio</span>
+      <span class="title__last"> <b>Agency</b></span>
       <div class="header__company_name">
         <b>By OLLSUM</b>
       </div>
@@ -38,7 +37,7 @@ export default {
     .title__last {
       color: $secondary-color;
       font-size: 5em;
-      font-family: 'paper';
+      // font-family: 'paper';
       transform: rotate(-20deg);
     }
 

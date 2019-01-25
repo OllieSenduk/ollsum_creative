@@ -1,8 +1,8 @@
 <template>
   <div class="app_wrapper">
-    <appHamburger/>
+    <appHamburger v-on:navClicked="handleNav" />
     <appNavigation/>
-    <!-- <div class="app_background">
+    <div class="app_background">
       <div class="app_container">
 
         <appHeader/>
@@ -10,7 +10,7 @@
         <appMissionStatement/>
 
       </div>
-    </div> -->
+    </div>
   </div>
 </template>
 
@@ -38,6 +38,9 @@ export default {
       const [r, g, b] = [red/y, green/y, blue/y].map(Math.round)
       const background = this.$el.querySelector('.app_background')
       background.style.backgroundColor = `rgb(${r}, ${g}, ${b})`
+    },
+    handleNav: function() {
+      console.log("nav handled")
     }
   },
   mounted() {
@@ -49,6 +52,6 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   @import '~assets/scss/app.scss';
 </style>

@@ -7,6 +7,9 @@
 
 html, body {margin: 0; padding: 0; overflow-x:hidden;}
 
+.app_wrapper {
+  overflow-x:hidden;
+}
 .app_container {
   max-width: 90vw;
   margin: 50px auto;
